@@ -1,18 +1,13 @@
-// import { useState } from "react";
-import "./App.css";
-import { Avatar, Badge } from "@nextui-org/react";
+import AuthProvider from "./providers/AuthProvider";
+import Routes from "./routes";
 
-import img from "@/assets/react.svg"
+import "./App.css";
 
 function App() {
   return (
-    <Badge content="5" color="primary">
-      <Avatar
-        radius="md"
-        size="lg"
-        src={img}
-      />
-    </Badge>
+		<AuthProvider>
+			<Routes></Routes>
+		</AuthProvider>
   );
 }
 
